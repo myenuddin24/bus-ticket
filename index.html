@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="styles/styles.css">
     
 </head>
-<body class="px-20 py-6 m">
+<body class=" py-6">
     <!-- Header Start -->
-    <header>
+    <header class="px-20">
         <nav>
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
@@ -28,7 +28,7 @@
                       <li><a>Search</a></li>
                     </ul>
                   </div>
-                  <a class="raleway-font btn btn-ghost text-4xl font-extrabold text-[#030712] ">P-Ticket</a>
+                  <a class="raleway-font btn btn-ghost lg:text-4xl lg:font-extrabold text-[#030712] ">P-Ticket</a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
                   <ul class="menu menu-horizontal px-1">
@@ -39,15 +39,125 @@
                   </ul>
                 </div>
                 <div class="navbar-end">
-                  <a class="btn bg-[#1dd1001a] text-[#1DD100] font-bold text-xl border border-[#1dd10066] rounded-xl">Bus <img src="images/bus-icon.png" alt=""> </a>
+                  <a class="btn bg-[#1dd1001a] text-[#1DD100] lg:font-bold lg:text-xl border border-[#1dd10066] rounded-xl">Bus <img src="images/bus-icon.png" alt=""> </a>
                 </div>
               </div>
         </nav>
+        <!-- Banner start -->
+        <section>
+          <div class="carousel w-full  min-h-screen">
+            <div class="carousel-item w-full relative">
+              <img src="images/banner.png" class="w-full  " />
+              <div class="card absolute lg:w-full lg:h-full ">
+                <div class="card-body items-center text-center flex gap-10 mt-32">
+                  <h1 class="card-title raleway-font lg:text-[60px] lg:font-extrabold text-[#fff] flex flex-col"><span>End-to-End Travel with</span><br><span class="text-[#1DD100]">P Paribahan</span></h1>
+                  <p class="inter-font lg:text-lg flex-grow-0 font-normal text-[#fff]">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
+                  <div class="card-actions">
+                    <button class="btn btn-primary raleway-font bg-[#1DD100] text-[#030712] border-none lg:text-xl font-bold ">Buy Tickets</button>
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </div> 
+        </section>
     </header>
     <!-- Main Start -->
     <main>
-        
-        
+       <!-- Best offers for you -->
+       <section class="px-20">
+            <h1 class="text-[#030712] text-4xl font-bold lg:mt-20 mt-4 lg:mb-8 text-center">Best offers for you</h1>
+            <div class="flex lg:flex-row flex-col gap-10 justify-center ">
+              <div class="card  shadow-xl flex lg:flex-row bg-[#FFBF0F] ">
+                <div class="card-body">
+                  <h1 class="card-title inter-font text-[#030712cc] text-4xl font-extrabold">15% OFF</h1>
+                  <p class="inter-font text-xl text-[#030712cc] font-semibold">on your next purchase</p>
+                  <p class="inter-font text-[#03071280] text-lg font-medium">use by January 2024</p>
+                </div>
+                <div class="card-body">
+                  <h1 class="card-title raleway-font text-[#030712] text-3xl	font-bold">NEW15</h1>
+                  <p class="raleway-font text-[#03071266] text-xl font-medium">Coupon Code</p>
+                </div>
+              </div>
+              <div class="card  shadow-xl flex lg:flex-row bg-[#F78C9C]">
+                <div class="card-body">
+                  <h1 class="card-title inter-font text-[#030712cc] text-4xl font-extrabold">20% OFF</h1>
+                  <p class="inter-font text-xl text-[#030712cc] font-semibold">on your next purchase</p>
+                  <p class="inter-font text-[#03071280] text-lg font-medium">use by January 2024</p>
+                </div>
+                <div class="card-body">
+                  <h1 class="card-title raleway-font text-[#030712] text-3xl	font-bold">Couple 20</h1>
+                  <p class="raleway-font text-[#03071266] text-xl font-medium">Coupon Code</p>
+                </div>
+              </div>
+            </div>
+            <div class="mt-16 text-center">
+              <button class="btn btn-primary raleway-font text-xl font-bold bg-[#fff] text-[#1DD100] border-[#1DD100]">See All Offers</button>
+            </div>
+       </section>
+
+       <!-- Buy Ticket section -->
+
+       <section>
+         <div class="bg-[#F7F8F8] mt-20 rounded-t-[88px]	border-t-2	border-[#1DD100]">
+
+            <div class="text-center mt-20">
+              <h1 class="raleway-font text-[#030712] text-4xl font-bold">P.H Paribahan</h1>
+              <p class="inter-font text-[#03071299] text-lg font-normal mt-6">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+            </div>
+
+            <div class="px-20 mt-11 ">
+              <div class="bg-[#fff] rounded-3xl p-8 flex gap-20 items-center">
+                <div class="w-[80%]">
+                  <div class="flex space-x-96 ">
+                    <div class="flex gap-3">
+                      <img src="images/bus-logo.png" alt="">
+                      <div>
+                        <h1 class="raleway-font text-[#030712] text-3xl font-bold">Greenline Paribahan</h1>
+                        <p class="inter-font text-[#03071299] text-lg font-normal">Coach-009-WEB ! AC_Business</p>
+                      </div>
+                    </div>
+                    <div>
+                      <button class="btn bg-[#1dd10026]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
+                          <path d="M5.83333 13.6427C6.45217 13.6427 7.04566 13.8885 7.48325 14.3261C7.92083 14.7637 8.16667 15.3572 8.16667 15.976V18.3093H19.8333V15.976C19.8333 15.3572 20.0792 14.7637 20.5168 14.3261C20.9543 13.8885 21.5478 13.6427 22.1667 13.6427M5.83333 13.6427C5.21449 13.6427 4.621 13.8885 4.18342 14.3261C3.74583 14.7637 3.5 15.3572 3.5 15.976V20.6427C3.5 21.2615 3.74583 21.855 4.18342 22.2926C4.621 22.7302 5.21449 22.976 5.83333 22.976H22.1667C22.7855 22.976 23.379 22.7302 23.8166 22.2926C24.2542 21.855 24.5 21.2615 24.5 20.6427V15.976C24.5 15.3572 24.2542 14.7637 23.8166 14.3261C23.379 13.8885 22.7855 13.6427 22.1667 13.6427M5.83333 13.6427V7.80933C5.83333 6.88107 6.20208 5.99083 6.85846 5.33445C7.51484 4.67808 8.40508 4.30933 9.33333 4.30933H18.6667C19.5949 4.30933 20.4852 4.67808 21.1415 5.33445C21.7979 5.99083 22.1667 6.88107 22.1667 7.80933V13.6427M7 22.976V25.3093M21 22.976V25.3093" stroke="#1DD100" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="inter-font text-[#1DD100] text-lg font-medium">
+                          <span id="">8</span> <span>Seats left</span>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+  
+                  <div class="bg-[#F7F8F8] rounded-3xl p-6 mt-6">
+                    <div class="flex gap-96">
+                      <p class="raleway-font text-[#03071299] text-lg font-semibold">Route</p>
+                      <p class="raleway-font text-[#030712] text-lg font-semibold">Dhaka - Sylhet</p>
+                    </div>
+                    <hr class="my-6">
+                    <div class="flex gap-96">
+                      <p class="raleway-font text-[#03071299] text-lg font-semibold">Departure Time</p>
+                      <p class="raleway-font text-[#030712] text-lg font-semibold">9:00 PM</p>
+                    </div>
+                    <hr class="my-6">
+                    <div>
+                      <button class="btn bg-[#0307120d] mr-6">Boarding Point - Laxmipur</button>
+                      <button class="btn bg-[#0307120d] mr-6">Dropping Point - Bogura</button>
+                      <button class="btn bg-[#0307120d]">Est. Time - 11 Hour</button>
+                    </div>
+                  </div>
+                </div>
+                
+                <div>
+                  <img src="images/fare.png" alt="">
+                  <h1 class="raleway-font text-[#030712] text-3xl font-bold">550 Taka</h1>
+                  <p class="raleway-font text-[#03071299] text-2xl font-semibold">Per Seat</p>
+                </div>
+              </div>
+            </div>
+
+
+         </div>
+       </section>
     </main>
     <footer>
 
