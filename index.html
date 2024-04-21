@@ -53,7 +53,7 @@
                   <h1 class="card-title raleway-font lg:text-[60px] lg:font-extrabold text-[#fff] flex flex-col"><span>End-to-End Travel with</span><br><span class="text-[#1DD100]">P Paribahan</span></h1>
                   <p class="inter-font lg:text-lg flex-grow-0 font-normal text-[#fff]">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
                   <div class="card-actions">
-                    <button class="btn btn-primary raleway-font bg-[#1DD100] text-[#030712] border-none lg:text-xl font-bold ">Buy Tickets</button>
+                    <button onclick="scrollToDown()" class="btn btn-primary raleway-font bg-[#1DD100] text-[#030712] border-none lg:text-xl font-bold ">Buy Tickets</button>
                   </div>
                 </div>
               </div>
@@ -100,7 +100,7 @@
 
        <!-- Buy Ticket section -->
 
-       <section>
+       <section id="buyTicket">
          <div class="bg-[#F7F8F8] mt-20 rounded-t-[88px]	border-t-2	border-[#1DD100]">
 
             <div class="text-center mt-20">
@@ -125,7 +125,7 @@
                           <path d="M5.83333 13.6427C6.45217 13.6427 7.04566 13.8885 7.48325 14.3261C7.92083 14.7637 8.16667 15.3572 8.16667 15.976V18.3093H19.8333V15.976C19.8333 15.3572 20.0792 14.7637 20.5168 14.3261C20.9543 13.8885 21.5478 13.6427 22.1667 13.6427M5.83333 13.6427C5.21449 13.6427 4.621 13.8885 4.18342 14.3261C3.74583 14.7637 3.5 15.3572 3.5 15.976V20.6427C3.5 21.2615 3.74583 21.855 4.18342 22.2926C4.621 22.7302 5.21449 22.976 5.83333 22.976H22.1667C22.7855 22.976 23.379 22.7302 23.8166 22.2926C24.2542 21.855 24.5 21.2615 24.5 20.6427V15.976C24.5 15.3572 24.2542 14.7637 23.8166 14.3261C23.379 13.8885 22.7855 13.6427 22.1667 13.6427M5.83333 13.6427V7.80933C5.83333 6.88107 6.20208 5.99083 6.85846 5.33445C7.51484 4.67808 8.40508 4.30933 9.33333 4.30933H18.6667C19.5949 4.30933 20.4852 4.67808 21.1415 5.33445C21.7979 5.99083 22.1667 6.88107 22.1667 7.80933V13.6427M7 22.976V25.3093M21 22.976V25.3093" stroke="#1DD100" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                         <span class="inter-font text-[#1DD100] text-lg font-medium">
-                          <span id="">8</span> <span>Seats left</span>
+                          <span id="remaining-sent">8</span> <span>Seats left</span>
                         </span>
                       </button>
                     </div>
@@ -184,20 +184,20 @@
                     </div>
                     <div class="grid grid-cols-4 gap-4">
                       <div class="flex flex-col">
-                        <button id="A1" class="btn px-8 mb-5 text-[#03071280]">A1</button>
-                        <button id="B1" class="btn px-8 text-[#03071280]">B1</button>
+                        <button onclick="setBackgroundColor(this)" id="A1" class="btn px-8 mb-5 text-[#03071280]">A1</button>
+                        <button onclick="setBackgroundColor(this)" id="B1" class="btn px-8 text-[#03071280]">B1</button>
                       </div>
                       <div class="flex flex-col">
-                        <button id="A2" class="btn px-8 mb-5 text-[#03071280]">A2</button>
-                        <button id="B2" class="btn px-8 text-[#03071280]">B2</button>
+                        <button onclick="setBackgroundColor(this)" id="A2" class="btn px-8 mb-5 text-[#03071280]">A2</button>
+                        <button onclick="setBackgroundColor(this)" id="B2" class="btn px-8 text-[#03071280]">B2</button>
                       </div>
                       <div class="flex flex-col">
-                        <button id="A3" class="btn px-8 mb-5 text-[#03071280]">A3</button>
-                        <button id="B3" class="btn px-8 text-[#03071280]">B3</button>
+                        <button onclick="setBackgroundColor(this)" id="A3" class="btn px-8 mb-5 text-[#03071280]">A3</button>
+                        <button onclick="setBackgroundColor(this)" id="B3" class="btn px-8 text-[#03071280]">B3</button>
                       </div>
                       <div class="flex flex-col">
-                        <button id="A4" class="btn px-8 mb-5 text-[#03071280]">A4</button>
-                        <button id="B4" class="btn px-8 text-[#03071280]">B4</button>
+                        <button onclick="setBackgroundColor(this)" id="A4" class="btn px-8 mb-5 text-[#03071280]">A4</button>
+                        <button onclick="setBackgroundColor(this)" id="B4" class="btn px-8 text-[#03071280]">B4</button>
                       </div>
                     </div>
                   </div>
@@ -210,7 +210,7 @@
                     <div class="flex gap-40">
                       <div class="flex gap-2">
                         <h1 class="text-[#030712] text-lg font-medium">Seat</h1>
-                        <div class="bg-[#1DD100] text-[#fff] font-bold rounded-lg w-6 h-6 px-2">2</div>
+                        <div id="selected-seat" class="bg-[#1DD100] text-[#fff] font-bold rounded-lg w-6 h-6 px-2">0</div>
                       </div>
                       <h1 class="text-[#030712] text-lg font-medium">Class</h1>
                       <h1 class="text-[#030712] text-lg font-medium">Price</h1>
@@ -224,7 +224,7 @@
                   </div>
                   <div class="flex gap-96 m-3">
                     <h1 class="text-[#030712] text-lg font-medium">Total Price</h1>
-                    <h1 class="text-[#030712] text-lg font-medium">BDT <span>550</span></h1>
+                    <h1 class="text-[#030712] text-lg font-medium">BDT <span id="total-price">0</span></h1>
                   </div>
                   <div>
                     <label class="input input-bordered flex items-center gap-2">
@@ -234,7 +234,7 @@
                   </div>
                   <div class="flex gap-96 m-3">
                     <h1 class="text-[#030712] text-lg font-medium">Grand Total</h1>
-                    <h1 class="text-[#030712] text-lg font-medium">BDT <span>550</span></h1>
+                    <h1 class="text-[#030712] text-lg font-medium">BDT <span id="grand-total">0</span></h1>
                   </div>
                   <div>
                     <button class="btn w-full bg-[#1DD100] rounded-2xl raleway-font text-xl font-extrabold text-[#fff]">Next</button>
@@ -249,7 +249,7 @@
     
       <footer class="footer p-20 bg-[#030712] text-neutral-content">
         <div>
-          <div class="flex gap-96">
+          <div class="flex justify-between w-full">
             <div>
               <h1 class="raleway-font text-4xl font-extrabold text-[#fff] mb-5">P-Ticket</h1>
               <p class="inter-font text-[#ffffffcc] text-lg font-normal">P-Ticket is a digital platform to make your daily commuting better.</p>
@@ -284,6 +284,7 @@
         
       </footer>
    
-
+ <script src="scripts/index.js"></script>
+ <script src="scripts/custom.js"></script>
 </body>
 </html>
