@@ -2,9 +2,11 @@ function scrollToDown(){
     document.getElementById("buyTicket").scrollIntoView();
 }
 
-function setBackgroundColor(event){
+function setClickEvent(event){
+
    const bgColor = 'greenyellow';
    event.style.backgroundColor = bgColor ;
+
 
 
    const currentSeat = getElementValueById('selected-seat');
